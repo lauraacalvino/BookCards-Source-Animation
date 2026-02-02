@@ -1,0 +1,225 @@
+body {
+    font-family: 'Georgia', serif;
+    background: #fff;
+    color: #2f2f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+
+.music-hero {
+    text-align: center;
+    max-width: 900px;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0;
+    color: #6b6b6b;
+}
+
+.cta-wrapper {
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.switch-largo {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 44px;
+}
+
+.switch-largo input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #f0f0f0;
+    transition: .4s;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+}
+
+
+.bolita {
+    position: absolute;
+    content: "";
+    height: 36px;
+    width: 36px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.text-off, .text-on {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .4s;
+    position: absolute;
+    pointer-events: none;
+}
+
+.text-on { 
+    opacity: 0; 
+    color: white;
+    transform: translateX(-10px);
+}
+
+.text-off { 
+    opacity: 1; 
+    color: #666;
+    transform: translateX(10px);
+}
+
+
+input:checked + .slider {
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+}
+
+input:checked + .slider .bolita {
+    transform: translateX(174px);
+}
+
+input:checked + .slider .text-off {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+input:checked + .slider .text-on {
+    opacity: 1;
+    transform: translateX(-15px);
+}
+
+.cards {
+    display: flex;
+    margin-top: 40px;
+    gap: 60px;
+}
+
+.card {
+    background: #f5f5f5;
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;
+    padding: 15px;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card.frist {
+    transform: rotate(-5deg) translateY(0);
+}
+
+.card.second {
+    transform: rotate(2deg) translateY(-10px); 
+}
+
+.card.third {
+    transform: rotate(6deg) translateY(5px);
+}
+
+
+.card:hover {
+    transform: rotate(0deg) scale(1.05) !important; /*el imoportan este vi que se ponía para que prevalezca esta animacion, sino provalece las del js del timeline*/
+    z-index: 10;
+}
+
+.card.active-card {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+    z-index: 10 !important;
+}
+
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 13px;
+    margin-top: 200px;
+}
+
+.card button {
+    padding: 8px 40px;
+    border: none;
+    border-radius: 15px;
+    background: #7c3aed;
+    color: white;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.stats-panel {
+    display: none; /* oculto por defecto */
+    margin-top: 50px;
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.stat-item {
+    margin-bottom: 20px;
+}
+
+.stat-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #7c3aed;
+    border-radius: 10px;
+    width: 0%; /* empieza en 0 para animarlo */
+}
+
+

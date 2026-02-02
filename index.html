@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Librería Nexus</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+</head>
+
+<body>
+
+<section class="music-hero">
+
+
+    <div class="intro-text">
+        <h1 class="title">Librería Nexus</h1>
+        <p class="subtitle">Encuentra las historias más conmovedoras.</p>
+    </div>
+
+    <div class="cta-wrapper">
+        <label class="switch-largo">
+            <input type="checkbox" id="stats-toggle">
+            <div class="slider">
+            <span class="text-off">Mostrar estadísticas</span>
+            <span class="text-on">Estadísticas activas</span>
+            <span class="bolita"></span>
+            </div>
+        </label>
+    </div>
+
+    <div class="cards">
+        <div class="card frist">
+            <h3>Las gratitudes</h3>
+            <p>Delphine De Vigan</p>
+            <button class="estad" data-speed="75" data-pop="90" data-sales="60">Estadísticas</button>
+        </div>
+        <div class="card second">
+            <h3>Nacidos de la Bruma</h3>
+            <p>Brandon Sanderson</p>
+            <button class="estad" data-speed="60" data-pop="95" data-sales="80">Estadísticas</button>
+        </div>
+        <div class="card third">
+            <h3>Muerte en el Nilo</h3>
+            <p>Agatha Christie</p>
+            <button class="estad" data-speed="85" data-pop="70" data-sales="50">Estadísticas</button>
+        </div>
+    </div>
+
+    <div id="stats-container" class="stats-panel">
+        <div class="stat-item">
+            <label>Velocidad de Lectura</label>
+            <div class="progress-bar"><div class="fill" id="speed"></div></div>
+        </div>
+        <div class="stat-item">
+            <label>Popularidad (Reseñas)</label>
+            <div class="progress-bar"><div class="fill" id="pop"></div></div>
+        </div>
+        <div class="stat-item">
+            <label>Ventas Mensuales</label>
+            <div class="progress-bar"><div class="fill" id="sales"></div></div>
+        </div>
+    </div>
+</section>
+
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
