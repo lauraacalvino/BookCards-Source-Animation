@@ -5,6 +5,8 @@ Built to showcase literary collections through micro-interactions, perspective-d
 
 *This is intended as a UI pattern / reusable resource, not a complete product.*
 
+Done by: Paola Muñoz, Joan Mascarell and Laura Calviño.
+
 
 ## ✨ Features
 
